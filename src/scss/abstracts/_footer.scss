@@ -1,0 +1,48 @@
+@import './mixins';
+@import './styleComponents/customemail.scss';
+@import './styleComponents/contact';
+
+.footer{
+    background-color: var(--footer-background);
+    width: 100%;
+    padding: .5rem;
+    .more-info{
+        .navList-fo{
+            margin: 1rem 2rem;
+            li{
+                margin-bottom: .6rem;
+                a{
+                    color: var(--smoke-withe);
+                    transition: .4s;
+                    &:hover{
+                        color: var(--tertiary-color);
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        text-align: center;
+        color: var(--tertiary-color);
+        a{
+            color: var(--tertiary-color);
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .footer{
+        .more-info{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            .email{
+                form{
+                    p{
+                        color: var(--smoke-withe);
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+}

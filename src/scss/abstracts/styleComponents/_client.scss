@@ -1,0 +1,78 @@
+/* Client design */
+
+.clients{
+    padding: .5rem;
+    margin-bottom: 2rem;
+    .red-text{
+        color: var(--red);
+    }
+    h1{
+        @include font-style(2.2rem, 500);
+        width: 80%;
+    }
+    .hero-text{
+        color: var(--secondary-color);
+        width: 80%;
+    }
+    .quote{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .gallery{
+        margin-top: 1.2rem;
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+        place-content: center;
+        align-items: center;
+        .img1{
+            width: 172px;
+        }
+        .side{
+            .img2{
+                width: 144px;
+            }
+            .img3{
+                width: 162px;
+            }
+        }
+    }
+
+    .teamate{
+        display: flex;
+        &-info{
+            margin-left: 1.5rem;
+            h3{
+                @include font-style(1.4rem, 500);
+            }
+            p{
+                color: var(--secondary-color);
+            }
+        }
+        img{
+            width: 85px;
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .clients{
+        margin-bottom: 2rem;
+        .grid-section{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            align-items: center;
+        }
+        .quote{
+            font-size: 1.6rem;
+            margin: 1rem 2rem;
+        }
+    
+        .teamate{
+            margin-left: 2rem;
+        }
+    }
+}

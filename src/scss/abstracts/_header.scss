@@ -1,0 +1,17 @@
+@import './styleComponents/navbar.scss';
+
+.header{
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .header{
+        padding: 0  1rem 0 1rem;
+        height: 3rem;
+    }
+}

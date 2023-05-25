@@ -1,0 +1,17 @@
+@mixin font-style( $size, $weight ) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin button( $back-color, $color, $padding, $radius ) {
+    background-color: $back-color;
+    color: $color;
+    padding: $padding;
+    border-radius: $radius;
+}
+
+@mixin svgStyle( $fill, $back-color, $radius ){
+    fill: $fill;
+    background-color: $back-color;
+    border-radius: $radius;
+}

@@ -1,0 +1,16 @@
+.contact{
+    margin: 1rem 2rem;
+    h1{
+        @include font-style(2rem, 800);
+        color: var(--smoke-withe);
+    }
+    .inline{
+        svg{
+            fill: white;
+            width: 1.2rem;
+        }
+        .move{
+            margin-left: .8rem;
+        }
+    }
+}

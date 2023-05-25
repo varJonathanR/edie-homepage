@@ -1,0 +1,92 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .navList-he{
+        display: flex;
+        li{
+            margin: 0 .8rem;
+            a{
+                font-weight: 600;
+            }
+        }
+    }
+    .nav-toggle{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar{
+        h1{
+            font-size: 1.5rem;
+        }
+        .navList-he{
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            position: absolute;
+            top: 48px;
+            display: flex;
+            flex-direction: column;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            transform: translateX(-100%);
+            transition: all .45s;
+            li{
+                margin: 1rem;
+                &::before{
+                    background: transparent;
+                }
+            }
+        }
+        .navList-he.open{
+            transform: translateX(0);
+        }
+        .nav-toggle{
+            display: flex;
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            .bar{
+                position: relative;
+                width: 32px;
+                height: 2px;
+                background: var(--primary-color);
+                &::before, &::after{
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    background: var(--primary-color);
+                    border-radius: 2px;
+                    transition: all .4s ease-in-out;
+                }
+                &::before{
+                    width: 25px;
+                    transform: translateY(-8px);
+                    right: 0;
+                }
+                &::after{
+                    width: 32px;
+                    transform: translateY(8px);
+                }
+            }
+        }
+        .nav-toggle.open{
+            .bar{
+                transform: translateX(-40px);
+                background: transparent;
+                &::before{
+                    width: 32px;
+                    transform: rotate(45deg) translate(26px, -26px);
+                }
+                &::after{
+                    transform: rotate(-45deg) translate(26px, 26px);
+                }
+            }
+        }
+    }
+}

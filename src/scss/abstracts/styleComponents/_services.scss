@@ -1,0 +1,72 @@
+/* Services design */
+
+.services{
+    .border-radius{
+        border-radius: 10px;
+    }
+    h3{
+        @include font-style(1.5rem, 500);
+        width: 70%;
+        margin-left: 1.5rem;
+    }
+    &-card{
+        .card{
+            margin-top: 2rem;
+            padding: 1.5rem;
+            @extend .border-radius;
+            transition: box-shadow 0.3s ease-in-out;
+            &:hover {
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            svg{
+                padding: .6rem;
+                margin-bottom: 1rem;
+            }
+            .light-blue{
+                @include svgStyle(white, var(--light-blue), 10px)
+            }
+            .green{
+                @include svgStyle(white, var(--green), 10px)
+            }
+            .red{
+                @include svgStyle(white, var(--red), 10px)
+            }
+            h1{
+                margin-bottom: 1rem
+            }
+            button{
+                @include button(var(--light-blue), white, .8rem, 10px);
+                margin-top: .5rem;
+                transition: .4s;
+                &:hover{
+                    background-color: var(--tertiary-color);
+                    color: var(--secondary-color);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .services{
+        .border-radius{
+            border-radius: 10px;
+        }
+        h3{
+            @include font-style(2.2rem, 500);
+            width: 50%;
+            margin-left: 3rem;
+        }
+        &-card{
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(
+                    150px,
+                    1fr
+                )
+            );
+            gap: 1rem;
+        }
+    }
+}

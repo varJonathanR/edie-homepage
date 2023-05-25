@@ -1,0 +1,65 @@
+/* Home design */
+
+.home{
+    &-title{
+        width: 85%;
+        padding-left: 1.8rem;
+        margin-bottom: 1rem;
+        p{
+            color: var(--light-blue);
+        }
+        h3{
+            @include font-style(1.5rem, 500);
+        }
+    }
+    img{
+        height: 145px;
+        width: 100%;
+        object-fit: cover;
+    }
+    &-intro{
+        padding: 1.5rem;
+        h3{
+            @include font-style(1.5rem, 500);
+            margin-bottom: 1rem;
+        }
+        p{
+            color: var(--secondary-color);
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .home{
+        padding: 0 1rem;
+        &-title{
+            width: 65%;
+            margin-left: 3rem;
+            h3{
+                @include font-style(2.5rem, 500);
+            }
+        }
+        img{
+            height: 200px;
+        }
+        &-intro{
+            margin-left: 3rem;
+            width: 50%;
+            h3{
+                @include font-style(2.5rem, 500);
+                margin-bottom: 1rem;
+            }
+        }
+        .email{
+            margin-left: 4rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .home{
+        img{
+            height: 354px;
+        }
+    }
+}

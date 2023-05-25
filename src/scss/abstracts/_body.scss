@@ -1,0 +1,19 @@
+@import './mixins';
+
+.body{
+    padding: .5rem;
+    margin-top: 5rem;
+    @import './styleComponents/home.scss';
+    @import './styleComponents/services.scss';
+    @import './styleComponents/work.scss';
+    @import './styleComponents/client.scss';
+    @import './styleComponents/customemail.scss';
+}
+
+@media screen and (max-width: 767px) {
+    .body{
+        margin-top: 3.5rem;
+    }
+}
+
+/* To improve the organization of the page, I divided the design into multiple page section styles */

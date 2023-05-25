@@ -1,0 +1,89 @@
+/* Our work design */
+
+.ourWork{
+    h3{
+        width: 80%;
+        margin: 1rem 2rem;
+        @include font-style(1.5rem, 500);
+    }
+    .alignRight{
+        button{
+            margin-left: 1rem;
+            padding: 1rem;
+            transition: transform 0.3s ease-in-out;
+            &:hover, &:focus{
+                transform: scale(1.2);
+            }
+            span {
+                color: var(--light-blue);
+                @include font-style(1rem, 600);
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+        button:hover span{
+            transform: scale(1);
+        }
+    }
+
+    .gallery-work{
+        .work{
+            margin-bottom: 1rem;
+            .img-container{
+                overflow: hidden;
+                border-radius: 10px;
+                img{
+                    height: 350px;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: all 0.5s ease-in-out;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            p{
+                @include font-style(.8rem, 400);
+                color: var(--secondary-color);
+            }
+            h4{
+                @include font-style(1.2rem, 500);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .ourWork{
+        h3{
+            width: 60%;
+            margin-left: 3rem;
+            @include font-style(2.2rem, 500);
+        }
+        .alignRight{
+            text-align: right;
+            margin-right: 2rem;
+        }
+        .gallery-work{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            .down{
+                margin-top: 6rem;
+            }
+            .down-less{
+                margin-top: -2rem;
+            }
+            .work{
+                margin-bottom: 1rem;
+                .img-container{
+                    img{
+                        height: 425px;
+                    }
+                }
+                h4{
+                    @include font-style(1.5rem, 500);
+                }
+            }
+        }
+    }
+}

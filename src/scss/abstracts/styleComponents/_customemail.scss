@@ -1,0 +1,26 @@
+.email{
+    display: flex;
+    align-items: center;
+    margin-left: 1.8rem;
+    margin-bottom: 2rem;
+    p{
+        color: var(--secondary-color);
+        font-size: 10px;
+    }
+    .form-box{
+        padding: .5rem;
+        border-radius: 10px;
+        background-color: var(--smoke-withe);
+        input{
+            font-size: 10px;
+            padding: .5rem 10px;
+            border: none;
+            outline: none;
+            color: var(--tertiary-color);
+            background-color: var(--smoke-withe);
+        }
+        button{
+            @include button(var(--light-blue), white, 10px 1rem, 10px)
+        }
+    }
+}

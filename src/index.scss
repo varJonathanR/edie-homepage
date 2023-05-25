@@ -1,0 +1,12 @@
+/* Abstracts */
+
+@use './scss/abstracts/variables';
+@use './scss/abstracts/mixins';
+@use './scss/abstracts/header';
+@use './scss/abstracts/body';
+@use './scss/abstracts/footer';
+
+/* base */
+
+@use './scss/base/base';
+@use './scss/base/reset';
